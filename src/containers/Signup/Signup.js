@@ -21,9 +21,6 @@ export default function Signup() {
   const { userHasAuthenticated, isAuthenticated } = useAppContext();
   const [isLoading, setIsLoading] = useState(false);
 
-//   Auth.currentUserInfo()
-//     .then(res => console.log(res))
-//     .catch(err => console.log(err))
 
   useEffect(() => {
     if(!newUser && !isAuthenticated) return;
@@ -31,7 +28,7 @@ export default function Signup() {
     Auth.resendSignUp(username)
         .then(response => console.log(response))
         .catch(err => console.log(err))
-  }, [newUser])
+  }, [newUser, isAuthenticated])
 
   function validateForm() {
     return (
