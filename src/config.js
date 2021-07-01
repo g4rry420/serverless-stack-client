@@ -2,7 +2,7 @@ const dev = {
   STRIPE_KEY: process.env.REACT_APP_STRIPE_KEY,
   s3: {
     REGION: "ca-central-1",
-    BUCKET: process.enc.REACT_APP_BUCKET_NAME_DEV
+    BUCKET: process.env.REACT_APP_BUCKET_NAME_DEV
   },
   apiGateway: {
     REGION: "ca-central-1",
@@ -20,7 +20,7 @@ const prod = {
   STRIPE_KEY: process.env.REACT_APP_STRIPE_KEY,
   s3: {
     REGION: "ca-central-1",
-    BUCKET: process.enc.REACT_APP_BUCKET_NAME
+    BUCKET: process.env.REACT_APP_BUCKET_NAME
   },
   apiGateway: {
     REGION: "ca-central-1",
